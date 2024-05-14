@@ -2,7 +2,7 @@
     "name": "lookml-highlighter",
     "displayName": "LookML Highlighter",
     "description": "Syntax highlighting for LookML",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "publisher": "moseleyi",
     "engines": {
         "vscode": "^1.53.0"
