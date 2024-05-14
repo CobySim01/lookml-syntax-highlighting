@@ -60,6 +60,7 @@
 							"patterns": [
 								{"include": "#variable"},
 								{"include": "#string"},
+								{"include": "#string_single"},
 								{"include": "#yesno"}
 							]
 						}
@@ -87,6 +88,7 @@
 								{"include": "#variable"},
 								{"include": "#operator"},
 								{"include": "#string"},
+								{"include": "#string_single"},
 								{"include": "#number"},
 								{"include": "#liquid_tags"},
 								{"include": "#liquid_output"},
@@ -109,13 +111,23 @@
 
 		"string": {
 			"name": "string.quoted.double.lookml",
-			"begin": "\"|\\'",
-			"end": "\"|\\'",
+			"begin": "\"",
+			"end": "\"",
 			"patterns": [
 				{"include": "#constant"},
 				{"include": "#liquid_output"}
 			]
 		},
+		
+		"string_single": {
+			"name": "string.quoted.single.lookml",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{"include": "#constant"},
+				{"include": "#liquid_output"}
+			]
+		},		
 
 		"number": {
 		  "match": "((-|\\+)\\s*)?[0-9]+(\\.[0-9]+)?",
@@ -146,6 +158,7 @@
 			},
 			"patterns": [
 				{"include": "#string"},
+				{"include": "#string_single"},
 				{
 					"name": "source.lookml.parameter.array.delimiter",
 					"match": "\\,"
@@ -176,6 +189,7 @@
 			"patterns": [
 				{"include": "#liquid_filter"},
 				{"include": "#string"},
+				{"include": "#string_single"},
 				{"include": "#operator"},
 				{"include": "#number"}
 			],
@@ -218,6 +232,7 @@
 			"patterns": [
 				{"include": "#variable"},
 				{"include": "#string"},
+				{"include": "#string_single"},
 				{"include": "#number"},
 				{"include": "#sql_constant"},
 				{"include": "#sql_keyword"},

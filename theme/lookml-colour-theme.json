@@ -3,6 +3,7 @@
   "tokenColors": [
     {"scope": ["constant.numeric.lookml"],                "settings": {"foreground": "#36982D"}},
     {"scope": ["string.quoted.double.lookml"],            "settings": {"foreground": "#c77528"}},
+    {"scope": ["string.quoted.single.lookml"],            "settings": {"foreground": "#c77528"}},
     {"scope": ["source.lookml.scope"],                    "settings": {"foreground": "#aaaaaa"}},
     {"scope": ["source.lookml.scope.type"],               "settings": {"foreground": "#6997bf"}},
     {"scope": ["source.lookml.scope.name"],               "settings": {"foreground": "#555555"}},
